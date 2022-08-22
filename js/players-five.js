@@ -45,6 +45,11 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         document.getElementById('player-cost').value = '';
         return;
     }
+    else if(perPlayerCost < 0 ){
+        alert('Please Provide a valid amount');
+        document.getElementById('player-cost').value = '';
+        return;
+    }
 
     const totalPlayerExpenses = perPlayerCost * playerArray.length;
 
@@ -55,6 +60,12 @@ document.getElementById('total-calculate').addEventListener('click', function ()
     const managerFee = getInputValueById('manager-fee');
     const coachFee = getInputValueById('coach-fee');
     if(isNaN(managerFee) || isNaN(coachFee)){
+        alert('Please provide a valid amount');
+        document.getElementById('manager-fee').value = '';
+        document.getElementById('coach-fee').value = '';
+        return;
+    }
+    else if(managerFee < 0 || coachFee < 0){
         alert('Please provide a valid amount');
         document.getElementById('manager-fee').value = '';
         document.getElementById('coach-fee').value = '';
