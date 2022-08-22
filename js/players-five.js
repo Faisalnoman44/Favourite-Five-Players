@@ -1,5 +1,6 @@
 const playerArray = []
 
+
 function display(players) {
     const selectedPlayer = document.getElementById('selected-player');
     selectedPlayer.innerText = '';
@@ -25,6 +26,8 @@ function addToSelect(element) {
 
 
     display(playerArray);
+
+    disable(element);
 }
 
 document.getElementById('calculate-btn').addEventListener('click',function(){
@@ -45,5 +48,5 @@ document.getElementById('total-calculate').addEventListener('click', function(){
 
     const finalTotal = totalPlayerExpenses + managerFee + coachFee;
 
-    setTextvalueById('final-total',finalTotal);
+    setTextvalueById('final-total',finalTotal)
 })

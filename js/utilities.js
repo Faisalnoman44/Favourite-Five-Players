@@ -9,3 +9,7 @@ function setTextvalueById(elementId,newValue){
     const element = document.getElementById(elementId);
     element.innerText = newValue;
 }
+
+function disable(element){
+    element.disabled = true;
+}
