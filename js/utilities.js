@@ -7,5 +7,5 @@ function getInputValueById(elementId){
 
 function setTextvalueById(elementId,newValue){
     const element = document.getElementById(elementId);
-    element.innerText = 
+    element.innerText = newValue;
 }
